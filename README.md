@@ -23,7 +23,7 @@ claude-telegram-v2/
 ### 1. Клонувати репозиторій
 
 ```bash
-git clone https://github.com/<username>/claude-telegram-v2.git
+git clone https://github.com/kubryk/claude-telegram-v2.git
 cd claude-telegram-v2
 ```
 
@@ -52,8 +52,8 @@ docker-compose up -d
 ### 4. Встановити плагін у Claude Code
 
 ```bash
-claude plugin marketplace add github:<username>/claude-telegram-v2 --sparse plugin
-claude plugin install telegram@claude-telegram-v2
+claude plugin marketplace add github:kubryk/claude-telegram-v2 --sparse plugin
+claude plugin install telegram-local@claude-telegram-v2
 ```
 
 ### 5. Налаштувати бота
@@ -61,13 +61,13 @@ claude plugin install telegram@claude-telegram-v2
 Запусти Claude Code і виконай:
 
 ```
-/telegram:configure <TELEGRAM_BOT_TOKEN>
+/telegram-local:configure <TELEGRAM_BOT_TOKEN>
 ```
 
 ### 6. Запустити з каналом
 
 ```bash
-claude --channels plugin:telegram@claude-telegram-v2
+claude --channels plugin:telegram-local@claude-telegram-v2
 ```
 
 ### 7. Спарити пристрій
@@ -75,13 +75,13 @@ claude --channels plugin:telegram@claude-telegram-v2
 Напиши будь-яке повідомлення своєму боту в Telegram — він відповість 6-значним кодом. Потім у Claude Code:
 
 ```
-/telegram:access pair <код>
+/telegram-local:access pair <код>
 ```
 
 Після першого входу переключи політику на allowlist:
 
 ```
-/telegram:access policy allowlist
+/telegram-local:access policy allowlist
 ```
 
 ## Локальний Bot API vs хмарний

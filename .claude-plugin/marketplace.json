@@ -8,7 +8,7 @@
   },
   "plugins": [
     {
-      "name": "telegram",
+      "name": "telegram-local",
       "description": "Telegram messaging bridge for Claude Code with local Bot API — supports files up to 2 GB.",
       "author": {
         "name": "kubryk"
