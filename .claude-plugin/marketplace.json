@@ -1,0 +1,19 @@
+{
+  "name": "claude-telegram-v2",
+  "owner": {
+    "name": "kubryk"
+  },
+  "metadata": {
+    "description": "Telegram channel for Claude Code with local Bot API support (up to 2 GB file transfers)."
+  },
+  "plugins": [
+    {
+      "name": "telegram",
+      "description": "Telegram messaging bridge for Claude Code with local Bot API — supports files up to 2 GB.",
+      "author": {
+        "name": "kubryk"
+      },
+      "source": "./plugin"
+    }
+  ]
+}
